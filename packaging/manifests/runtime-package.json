@@ -1,0 +1,52 @@
+{
+  "schema": "orchestration.runtime-package.v1",
+  "generated_at": "2026-10-28T23:51:50+03:00",
+  "package_name": "orchestration-runtime-v0.3.0-dry-run",
+  "production_stable": "0.3.0",
+  "install_root": "/",
+  "library_files": [
+    {
+      "path": "Orchestration/protocol/CURRENT.md",
+      "size_bytes": 537,
+      "sha256": "b9549158339f3ef1bfe02bbb1ce40056d054670c9699be9c69057f34310dc1e5"
+    },
+    {
+      "path": "Orchestration/protocol/CHANGELOG.md",
+      "size_bytes": 4142,
+      "sha256": "446db49752d852b5ef34cb2f3a7160cbd3d23f4aa9ac95ec9d9d74086a405179"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.1.0.md",
+      "size_bytes": 11990,
+      "sha256": "a59dc90926fe7e5ab137d2890e9a88720d275e7f5dbd8ee00ee40f1775d4471b"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.2.0.md",
+      "size_bytes": 22646,
+      "sha256": "21d4813f3363601c511b72f8118cfc342fa904476d2b72037b081bbdc3b5a2a7"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.3.0.md",
+      "size_bytes": 38631,
+      "sha256": "c09e8e45ba0c9494cffe5e5d8e13454bc8cb013d727c4444b1e355ec6d1508e9"
+    }
+  ],
+  "library_file_count": 5,
+  "bootstrap_hook": {
+    "source_artifact": "packaging/bootstrap/USER_INSTRUCTIONS.txt",
+    "target": "account_or_workspace_user_instructions",
+    "sha256": "2a36c7e86c4791dbb9dfc8f6c82cd7ac19739d899dedefa4aee3b469d3bba09c",
+    "automatic_install": false
+  },
+  "target_local_generated": {
+    "path": "/Orchestration/deployment/INSTALLATION.md",
+    "included_in_bundle": false,
+    "contains_credentials": false
+  },
+  "update_rules": {
+    "existing_project_protocol_pins_unchanged": true,
+    "last_write_wins_forbidden": true,
+    "readback_required": true,
+    "checksum_verification_required": true
+  }
+}

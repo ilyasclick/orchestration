@@ -1,0 +1,234 @@
+{
+  "schema": "orchestration.repository-files.v1",
+  "generated_at": "2026-10-28T23:51:50+03:00",
+  "source_root": "/Orchestration",
+  "mode": "exact_allowlist",
+  "file_count": 31,
+  "policy": {
+    "default": "deny",
+    "include_only_listed_paths": true,
+    "forbid_unrelated_projects": true,
+    "forbid_credentials_sessions_secrets": true,
+    "library_internal_ids_are_nonportable": true,
+    "local_installation_metadata_excluded": "/Orchestration/deployment/INSTALLATION.md"
+  },
+  "files": [
+    {
+      "path": "Orchestration/AGENTS.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 2706,
+      "sha256": "fdf511aa71653d2d8fedd8081cf2c208d5f0a84231baa7857aef4046a74c717c",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/INDEX.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 4407,
+      "sha256": "3655ad0f13abaf853e9fe91f339d43ec28685d78587e2428bf9a39957f569f5f",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/INIT.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 2166,
+      "sha256": "16aa89514605be62885f12f9ae571f5d010b63f16d5c56ed87c50a4a704dac46",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/STATUS.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 2632,
+      "sha256": "8d1e2c6423e050a405c836797974680939f73d34ccc030d90c6c6b826efff456",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/branch-lifecycle-protocol-audit-2026-10-27.md",
+      "class": "maintainer_audit",
+      "size_bytes": 15133,
+      "sha256": "c7c830c2ae4fb618e72606a0d0e6b23d6b0ce48307441ae5173da48aeff700ea",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/branch-lifecycle-protocol-reaudit-2026-10-27.md",
+      "class": "maintainer_audit",
+      "size_bytes": 8705,
+      "sha256": "9d34c803b75731239da2b09aae644461a20c6e8a91662ccb0d98bde054f50ca0",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/legacy-adoption-protocol-audit-2026-10-27.md",
+      "class": "maintainer_audit",
+      "size_bytes": 13244,
+      "sha256": "a2db71e86f874bec2b964d515669c1c25c6ec628b42b25fbd1713f3d7a2f73ec",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/legacy-adoption-protocol-reaudit-2026-10-27.md",
+      "class": "maintainer_audit",
+      "size_bytes": 6921,
+      "sha256": "0d9f212273e54548efe69b5adc77bf23fd8c7bf904e72fabb2f017bb256b2580",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/library-baseline-audit-2026-10-26.md",
+      "class": "maintainer_audit",
+      "size_bytes": 4385,
+      "sha256": "b21cbfb7abe65aa9a583f52ed96f0bd06ca5826b5a5a90754a7a6ced96302fcd",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/project-bootstrap-protocol-audit-2026-10-26.md",
+      "class": "maintainer_audit",
+      "size_bytes": 11273,
+      "sha256": "c8d4e8106a48a656cae3de99b1e6cfd36e6e73669113da6c046a665c2d8a89e3",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/audits/project-bootstrap-protocol-reaudit-2026-10-27.md",
+      "class": "maintainer_audit",
+      "size_bytes": 10158,
+      "sha256": "65a7b100e80ee44c650c80e568b0f7c19f8a83cc244cb451118e8e2346118c38",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/branches/github-orchestration/ARCHITECTURE.md",
+      "class": "maintainer_branch_state",
+      "size_bytes": 13492,
+      "sha256": "a974a763e1d133668c54b6e553e86a7e1a0ac733cd00778ca39b49c7c8d90bf1",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/branches/github-orchestration/BRANCH.md",
+      "class": "maintainer_branch_state",
+      "size_bytes": 1473,
+      "sha256": "2c73e6bdcf149747064eb6131df336284fa23884dc5e0aa8d488c4ae7ebaafae",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/branches/github-orchestration/STATUS.md",
+      "class": "maintainer_branch_state",
+      "size_bytes": 1932,
+      "sha256": "8cb01c919976660ef9754fc0fafdc7158b39eb9a1d0516a7c5f1f7e3608b83fa",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/branch-lifecycle-fresh-reauditor-prompt-2026-10-27.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 6621,
+      "sha256": "90febe8b30f0b3482c32c396e22403eac3df97026ee2c9cc7fa2e758a10bd53e",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/branch-lifecycle-independent-auditor-prompt-2026-10-27.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 3996,
+      "sha256": "4f41c0d0683da0b00a0e991000a6aeec54143351253c5bab3f0e1096c4d2e6a7",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/legacy-adoption-fresh-reauditor-prompt-2026-10-27.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 4618,
+      "sha256": "05811f5fd8fdcff3d246aae38e1b5fc253be8ce98eaf6820c7bc9698263d1b33",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/legacy-adoption-independent-auditor-prompt-2026-10-27.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 4570,
+      "sha256": "2fcf75e4d2a4ce99b273ce525578008f332bb004e68de8be929722fc7d7b57a6",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/protocol-independent-reauditor-prompt-2026-10-26.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 8000,
+      "sha256": "8264c217a88d208d8dbd145df5c6f149c2eea76453f4e9d8b5b14632cbdff574",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/handoffs/strategy-independent-auditor-prompt-2026-10-26.md",
+      "class": "maintainer_handoff",
+      "size_bytes": 2879,
+      "sha256": "7257fe95ce15043b63696353eb795d24d13f9acdd27938937cbf4bc4784e685d",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/protocol/CHANGELOG.md",
+      "class": "protocol_pointer_metadata",
+      "size_bytes": 4142,
+      "sha256": "446db49752d852b5ef34cb2f3a7160cbd3d23f4aa9ac95ec9d9d74086a405179",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/CURRENT.md",
+      "class": "protocol_pointer_metadata",
+      "size_bytes": 537,
+      "sha256": "b9549158339f3ef1bfe02bbb1ce40056d054670c9699be9c69057f34310dc1e5",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.1.0-draft.md",
+      "class": "protocol_release_draft",
+      "size_bytes": 12035,
+      "sha256": "95052f2f29cfb4d180f80861f07380428ae05739dff4c609e6afe94ba3457349",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.1.0.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 11990,
+      "sha256": "a59dc90926fe7e5ab137d2890e9a88720d275e7f5dbd8ee00ee40f1775d4471b",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.2.0-draft.md",
+      "class": "protocol_release_draft",
+      "size_bytes": 22691,
+      "sha256": "3452fa107abb51789183f5ec0507044290c259c6e48961da1d8f1045436edc99",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.2.0.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 22646,
+      "sha256": "21d4813f3363601c511b72f8118cfc342fa904476d2b72037b081bbdc3b5a2a7",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.3.0-draft.md",
+      "class": "protocol_release_draft",
+      "size_bytes": 38676,
+      "sha256": "73e068afc00f349f990fef5f33f1fe139f0e2dcbed3fa108276fda207bf6b1e1",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.3.0.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 38631,
+      "sha256": "c09e8e45ba0c9494cffe5e5d8e13454bc8cb013d727c4444b1e355ec6d1508e9",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/strategy/branch-lifecycle-2026-10-27.md",
+      "class": "maintainer_strategy",
+      "size_bytes": 5357,
+      "sha256": "9bc441ad3099e24474394030a60ee1f98f4bd0349268a11ab99b040be2be37a3",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/strategy/legacy-adoption-fix-2026-10-27.md",
+      "class": "maintainer_strategy",
+      "size_bytes": 2629,
+      "sha256": "59e50e3ddcda253b43519fe53ff6c46f567f1f9447ca6eda3bfadb39f2a3cb9f",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/strategy/universal-project-launch-strategy.md",
+      "class": "maintainer_strategy",
+      "size_bytes": 31904,
+      "sha256": "59495326a5ff3fb143989b1ee4b1484010260c0df1ac6e81aaf32ec2371fbd11",
+      "consumer_runtime": false
+    }
+  ]
+}
