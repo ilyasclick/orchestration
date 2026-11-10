@@ -1,49 +1,35 @@
 # Orchestration — STATUS
 
-Updated: 2026-10-28
-Stage: `0.3.0` promoted to production STABLE after ORCH-10 fresh independent re-audit and explicit Conductor approval.
-Gate: `0_3_0_STABLE`
 
-Reason:
-- ORCH-08 returned `AUDIT_PASS_WITH_FIXES` with three MUST protocol-contract defects;
-- ORCH-09 corrected all three in the development candidate, living strategy and branch-lifecycle design;
-- ORCH-10 independently re-audited the corrected normative behavior and returned `AUDIT_PASS`;
-- on 2026-10-28 the Conductor explicitly approved promotion to STABLE `0.3.0`;
-- promotion preserved the audited normative contract and changed only release metadata/production eligibility.
+Updated: 2026-11-08.
+Current production: 0.4.3 STABLE.
+Production pointer: /Orchestration/protocol/CURRENT.md.
+Exact release: /Orchestration/protocol/releases/v0.4.3/PROTOCOL.md (released 2026-11-08).
+Development candidate according to CURRENT: none. Production version is a global release fact; it does not imply that other projects were migrated.
 
-Audit result:
-1. crash-safe branch identity/registry commit and recovery: `CLOSED`;
-2. narrow mandatory same-branch root branch-control-plane authority: `CLOSED`;
-3. deterministic reopen continuity with preserved identity/history and readback: `CLOSED`;
-4. new MUST/SHOULD findings: `NONE`.
 
-Protocol state:
-- Production STABLE release: `0.3.0`;
-- production file: `/Orchestration/protocol/releases/v0.3.0.md`;
-- production CURRENT pointer: `0.3.0`;
-- active development candidate: `none`;
-- audited historical draft: `/Orchestration/protocol/releases/v0.3.0-draft.md`;
-- previous STABLE `0.2.0` remains immutable historical release;
-- existing projects pinned to older releases remain unchanged until explicit `PROJECT_UPGRADE`.
+Current verified branch lifecycle:
+- orchestration-vnext: ARCHIVED / BRANCH_ARCHIVED, physical path /Orchestration/branches/archive/orchestration-vnext/. Original 1.0.0-rc3 development and audits are preserved, but the branch was CANCELLED as superseded before completion of its original STABLE/GitHub publication gates. ORCH-18's limited AUDIT_PASS is not release authorization. See /Orchestration/branches/archive/orchestration-vnext/RESULT.md and /Orchestration/branches/archive/orchestration-vnext/STATUS.md.
+- github-orchestration: ARCHIVED by recorded Conductor decision 2026-11-03. Pre-0.4.0 logical archived branch remains physically at /Orchestration/branches/github-orchestration/. No reopen recorded.
+- branch-b0ae2385: ARCHIVED after Conductor cancellation 2026-11-07. Pre-0.4.0 logical archived branch remains physically at /Orchestration/branches/branch-b0ae2385/. No reopen recorded.
 
-Audit/promotion provenance:
-- prior audit: `/Orchestration/audits/branch-lifecycle-protocol-audit-2026-10-27.md` — `AUDIT_PASS_WITH_FIXES`;
-- fresh re-audit: `/Orchestration/audits/branch-lifecycle-protocol-reaudit-2026-10-27.md` — `AUDIT_PASS`;
-- Conductor promotion approval: explicit user instruction on 2026-10-28;
-- stable release: `/Orchestration/protocol/releases/v0.3.0.md`.
 
-Chat serial state:
-- ORCH-10 fresh independent re-audit is completed and `ARCHIVE_READY`;
-- ORCH-11 is reserved for the initial `github-orchestration` branch chat;
-- persisted `next_chat_serial`: `12`;
-- serials through `11` are consumed/reserved and must not be reused;
-- promotion itself did not allocate a chat serial; ORCH-11 was consumed by the new branch chat.
+Open lifecycle branches: 0 of 3 registered identities. Placement caveat: github-orchestration and branch-b0ae2385 have archived statuses but their folders have not been moved under /branches/archive/. This is a legacy physical-location exception to 0.4.0+ directory semantics and was not modified in this vNext-specific task. No claim of 0 open physical live-directory entries is made.
 
-Current lifecycle:
-- promotion gate: `COMPLETED`;
-- production protocol owner state: STABLE `0.3.0`;
-- next action: normal operation or a future explicitly requested protocol change;
-- no new agent is required by this completed gate.
 
-Live branches:
-- `github-orchestration` — `ACTIVE` / `DISCOVERY`; next: inventory canonical Orchestration artifacts and design the GitHub repository, synchronization and cross-account bootstrap model before any external GitHub write.
+Historical root STATUS.md (including the STABLE 0.3.0 audit and legacy 0.4.0 snapshot, ORCH-11..22 history and last recorded next_chat_serial: 23) is preserved without alteration at:
+- /Orchestration/Status/20261108T2202Z--vnext-archive-reconciliation/previous/STATUS.md
+The original INDEX.md is preserved at:
+- /Orchestration/Status/20261108T2202Z--vnext-archive-reconciliation/previous/INDEX.md
+The original vNext STATUS.md is preserved at:
+- /Orchestration/branches/archive/orchestration-vnext/STATUS-PRE-ARCHIVE-20261104.md
+No new serial was allocated or previous number reused in this reconciliation.
+
+
+Archive event (event folder predated reconciliation; exact original move time not independently verified):
+- /Orchestration/Status/20261108T1333Z--orchestration-vnext-archived--superseded-by-0-4-3/DETAILS.md
+Root reconciliation results:
+- /Orchestration/Status/20261108T2202Z--vnext-archive-reconciliation/DETAILS.md
+
+
+Next step: none for orchestration-vnext. A new explicit Conductor approval is required to reopen. Chat «Список открытых веток» is ready for UI archiving after Library readback; it was NOT archived via ChatGPT interface in this task.

@@ -1,19 +1,19 @@
 {
   "schema": "orchestration.runtime-package.v1",
-  "generated_at": "2026-10-28T23:51:50+03:00",
-  "package_name": "orchestration-runtime-v0.3.0-dry-run",
-  "production_stable": "0.3.0",
+  "generated_at": "2026-11-10T08:32:35.625Z",
+  "package_name": "orchestration-runtime-v0.4.3",
+  "production_stable": "0.4.3",
   "install_root": "/",
   "library_files": [
     {
-      "path": "Orchestration/protocol/CURRENT.md",
-      "size_bytes": 537,
-      "sha256": "b9549158339f3ef1bfe02bbb1ce40056d054670c9699be9c69057f34310dc1e5"
+      "path": "Orchestration/protocol/CHANGELOG.md",
+      "size_bytes": 5480,
+      "sha256": "40b1c63403f80c5e713a4d934f1f262343afafc599d4b7ff2e220e0ba1a734fb"
     },
     {
-      "path": "Orchestration/protocol/CHANGELOG.md",
-      "size_bytes": 4142,
-      "sha256": "446db49752d852b5ef34cb2f3a7160cbd3d23f4aa9ac95ec9d9d74086a405179"
+      "path": "Orchestration/protocol/CURRENT.md",
+      "size_bytes": 905,
+      "sha256": "a324b524aa735e30acc5739f6b756589c6abc9803bbd707c5f3b96a7047e2ded"
     },
     {
       "path": "Orchestration/protocol/releases/v0.1.0.md",
@@ -29,9 +29,34 @@
       "path": "Orchestration/protocol/releases/v0.3.0.md",
       "size_bytes": 38631,
       "sha256": "c09e8e45ba0c9494cffe5e5d8e13454bc8cb013d727c4444b1e355ec6d1508e9"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.0.md",
+      "size_bytes": 13618,
+      "sha256": "18d07aebc22cde8d1fa23e9827b4843866f57aa2d228dabb53fae4f0cac272de"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.1/PROTOCOL.md",
+      "size_bytes": 14932,
+      "sha256": "04fdf9108c8da3f1c07f068980e15dd5b199c185f4221d8576728cc34e3050e4"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.2/PROTOCOL.md",
+      "size_bytes": 7492,
+      "sha256": "5dca058ccd15138a7dc7ee759e3d74f663ae975f19616d94c97d257905e49431"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.3/PROJECT_INSTRUCTIONS_TEMPLATE.md",
+      "size_bytes": 2192,
+      "sha256": "e7b573d147423f9942d6b16b0279504352e8a782e9173608be1439d222e2f086"
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.3/PROTOCOL.md",
+      "size_bytes": 11817,
+      "sha256": "10d97cf27d1f1feee079c8f1df981e5ee8ea2eaf68aea96711936203cd628577"
     }
   ],
-  "library_file_count": 5,
+  "library_file_count": 10,
   "bootstrap_hook": {
     "source_artifact": "packaging/bootstrap/USER_INSTRUCTIONS.txt",
     "target": "account_or_workspace_user_instructions",
