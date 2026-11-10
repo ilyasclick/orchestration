@@ -1,9 +1,9 @@
 {
   "schema": "orchestration.repository-files.v1",
-  "generated_at": "2026-10-28T23:51:50+03:00",
+  "generated_at": "2026-11-10T08:32:35.625Z",
   "source_root": "/Orchestration",
   "mode": "exact_allowlist",
-  "file_count": 31,
+  "file_count": 36,
   "policy": {
     "default": "deny",
     "include_only_listed_paths": true,
@@ -18,27 +18,6 @@
       "class": "maintainer_root_state",
       "size_bytes": 2706,
       "sha256": "fdf511aa71653d2d8fedd8081cf2c208d5f0a84231baa7857aef4046a74c717c",
-      "consumer_runtime": false
-    },
-    {
-      "path": "Orchestration/INDEX.md",
-      "class": "maintainer_root_state",
-      "size_bytes": 4407,
-      "sha256": "3655ad0f13abaf853e9fe91f339d43ec28685d78587e2428bf9a39957f569f5f",
-      "consumer_runtime": false
-    },
-    {
-      "path": "Orchestration/INIT.md",
-      "class": "maintainer_root_state",
-      "size_bytes": 2166,
-      "sha256": "16aa89514605be62885f12f9ae571f5d010b63f16d5c56ed87c50a4a704dac46",
-      "consumer_runtime": false
-    },
-    {
-      "path": "Orchestration/STATUS.md",
-      "class": "maintainer_root_state",
-      "size_bytes": 2632,
-      "sha256": "8d1e2c6423e050a405c836797974680939f73d34ccc030d90c6c6b826efff456",
       "consumer_runtime": false
     },
     {
@@ -154,17 +133,31 @@
       "consumer_runtime": false
     },
     {
+      "path": "Orchestration/INDEX.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 8639,
+      "sha256": "7bd1dfb9d1f3951cf32aac08900718acce7f4920e2716dd21e0364124b109cfc",
+      "consumer_runtime": false
+    },
+    {
+      "path": "Orchestration/INIT.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 2166,
+      "sha256": "16aa89514605be62885f12f9ae571f5d010b63f16d5c56ed87c50a4a704dac46",
+      "consumer_runtime": false
+    },
+    {
       "path": "Orchestration/protocol/CHANGELOG.md",
       "class": "protocol_pointer_metadata",
-      "size_bytes": 4142,
-      "sha256": "446db49752d852b5ef34cb2f3a7160cbd3d23f4aa9ac95ec9d9d74086a405179",
+      "size_bytes": 5480,
+      "sha256": "40b1c63403f80c5e713a4d934f1f262343afafc599d4b7ff2e220e0ba1a734fb",
       "consumer_runtime": true
     },
     {
       "path": "Orchestration/protocol/CURRENT.md",
       "class": "protocol_pointer_metadata",
-      "size_bytes": 537,
-      "sha256": "b9549158339f3ef1bfe02bbb1ce40056d054670c9699be9c69057f34310dc1e5",
+      "size_bytes": 905,
+      "sha256": "a324b524aa735e30acc5739f6b756589c6abc9803bbd707c5f3b96a7047e2ded",
       "consumer_runtime": true
     },
     {
@@ -208,6 +201,48 @@
       "size_bytes": 38631,
       "sha256": "c09e8e45ba0c9494cffe5e5d8e13454bc8cb013d727c4444b1e355ec6d1508e9",
       "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.0.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 13618,
+      "sha256": "18d07aebc22cde8d1fa23e9827b4843866f57aa2d228dabb53fae4f0cac272de",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.1/PROTOCOL.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 14932,
+      "sha256": "04fdf9108c8da3f1c07f068980e15dd5b199c185f4221d8576728cc34e3050e4",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.2/PROTOCOL.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 7492,
+      "sha256": "5dca058ccd15138a7dc7ee759e3d74f663ae975f19616d94c97d257905e49431",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.3/PROJECT_INSTRUCTIONS_TEMPLATE.md",
+      "class": "protocol_project_instructions_template",
+      "size_bytes": 2192,
+      "sha256": "e7b573d147423f9942d6b16b0279504352e8a782e9173608be1439d222e2f086",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/protocol/releases/v0.4.3/PROTOCOL.md",
+      "class": "protocol_release_stable",
+      "size_bytes": 11817,
+      "sha256": "10d97cf27d1f1feee079c8f1df981e5ee8ea2eaf68aea96711936203cd628577",
+      "consumer_runtime": true
+    },
+    {
+      "path": "Orchestration/STATUS.md",
+      "class": "maintainer_root_state",
+      "size_bytes": 2849,
+      "sha256": "845e1e0802ef8167993c443f90ed11abd249826a969a0956a2116df9c2034859",
+      "consumer_runtime": false
     },
     {
       "path": "Orchestration/strategy/branch-lifecycle-2026-10-27.md",

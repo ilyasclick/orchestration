@@ -1,5 +1,21 @@
 # Orchestration protocol changelog
 
+## 0.4.0 — 2026-11-08
+
+Status: STABLE. Promoted by explicit Conductor approval on 2026-11-08.
+
+Production pointer: `/Orchestration/protocol/releases/v0.4.0.md`.
+
+Text-only update to 0.3.0 for new projects:
+- No root `INDEX.md` or `STATUS.md`; independent event files in `Status/` with navigation via Library.
+- Archive and restore whole branch folders between `branches/<branch_id>/` and `branches/archive/<branch_id>/` using native Library move.
+- ChatGPT agents hand over work, execute independent audits and use scheduled tasks when available; project-wide chat serial allocation is not required for new 0.4.0 projects.
+- By explicit Conductor decision, no mandatory `RESULT.md`; substantive branch outcomes are recorded as events in `Status/`.
+
+One independent review returned `AUDIT_PASS_WITH_FIXES` (`/Orchestration/tests/native-0.4.0-20261108/AUDIT.md`). The remaining `RESULT.md` format objection was addressed by the Conductor's explicit decision on 2026-11-08; no `AUDIT_PASS` is claimed. Native Library creation/readback, event writing by another agent and branch folder moves were demonstrated in the test project.
+
+The 0.3.0 STABLE release stays immutable and available. Existing projects retain their pinned protocol until separately authorized `PROJECT_UPGRADE`. No project migrations were performed during this release.
+
 ## 0.3.0 — 2026-10-28
 
 Status: STABLE.
