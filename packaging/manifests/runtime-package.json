@@ -60,8 +60,9 @@
   "bootstrap_hook": {
     "source_artifact": "packaging/bootstrap/USER_INSTRUCTIONS.txt",
     "target": "account_or_workspace_user_instructions",
-    "sha256": "2a36c7e86c4791dbb9dfc8f6c82cd7ac19739d899dedefa4aee3b469d3bba09c",
-    "automatic_install": false
+    "sha256": "41dd32be8b1755042c1a3a9b033bc1ead016f6ddf0cde7e795f8042bf47c9784",
+    "automatic_install": false,
+    "required_for_github_bootstrap": false
   },
   "target_local_generated": {
     "path": "/Orchestration/deployment/INSTALLATION.md",
@@ -73,5 +74,10 @@
     "last_write_wins_forbidden": true,
     "readback_required": true,
     "checksum_verification_required": true
+  },
+  "github_first_run": {
+    "protocol_source": "Orchestration/protocol/CURRENT.md",
+    "source_repository": "https://github.com/ilyasclick/orchestration",
+    "requires_local_orchestration_library": false
   }
 }
