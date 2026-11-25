@@ -17,7 +17,7 @@ def main():
     for name in NAMES:
         assert (REF / name).is_file(), f"missing reference: {name}"
     docs = {name: (REF / name).read_text(encoding="utf-8") for name in NAMES}
-    rows = re.findall(r"^\\| \\x60([A-Z_]+)\\x60 \\|", docs["COMMANDS.md"], flags=re.M)
+    rows = [line.split("|")[1].strip().strip("`") for line in docs["COMMANDS.md"].splitlines() if line.startswith("| `")]
     assert rows == INTENTS, f"14 semantic intents mismatch: {rows!r}"
     assert "Strictly read-only" in docs["COMMANDS.md"]
     assert "Explicit monitoring opt-in" in docs["COMMANDS.md"]
