@@ -1,23 +1,30 @@
-# Orchestration skill distribution and version authority
+# Orchestration Skill distribution and version authority
 
-The public source repository is https://github.com/ilyasclick/orchestration. Published STABLE release contents are immutable. The GitHub file `Orchestration/protocol/CURRENT.md` identifies the production STABLE for a **new** project. It is not consent to migrate an existing project, whose locally adopted version remains authoritative.
+Public source: https://github.com/ilyasclick/orchestration. The canonical Agent Skill is `skills/orchestration/SKILL.md`. The root `plugin.json` is an optional Agent Plugins 1.0.0 wrapper; it is not required for standalone Agent Skills installation.
 
-## Fresh consumer account / GitHub-plugin installation
+## Fresh account / GitHub-first bootstrap
 
-1. Install or connect the Orchestration plugin/skill from the supported GitHub source.
-2. No preexisting `/Orchestration/` Library tree or manual import is required for **new-project bootstrap**. The skill reads `Orchestration/protocol/CURRENT.md` directly from public GitHub and follows the exact STABLE path in the same repository. A supported GitHub connector or web reader suffices for public read access.
-3. Create only the authorized target project's Library control-plane state, following the selected release. Confirm actual saved project files with readback. Do not claim Library writes occurred if no compatible file tool was available.
-4. The optional `packaging/bootstrap/USER_INSTRUCTIONS.txt` host hook is **not automatically installed**. A linked skill is not proof that host/user/project instructions were updated.
-5. If GitHub cannot be fetched, report the source-access blocker; no hard-coded 0.3.0 fallback and no fabricated version or successful initialization.
+1. Install the Skill from GitHub using a compatible Agent Skills installer. See the repository's `SKILL_INSTALL.md`.
+2. No pre-existing `/Orchestration/` Library tree or manual protocol import is required for **new-project bootstrap**. Fetch `Orchestration/protocol/CURRENT.md` and the exact STABLE release from public GitHub using an available GitHub connector or web reader.
+3. The host must separately provide authorized target-project persistent writes and readback. Skill installation does not grant ChatGPT Projects/Library permissions. See `references/HOST-CAPABILITIES.md`.
+4. Create only the authorized target project's durable state, following the selected release. Confirm actual writes by readback. If the host lacks tools, report a capability blocker rather than success.
+5. The optional `packaging/bootstrap/USER_INSTRUCTIONS.txt` host hook is not automatically installed.
+6. If GitHub cannot be read, report source-access failure; never fall back to hard-coded 0.3.0.
 
-## Existing-project compatibility and optional local installation
+## Existing projects and optional offline cache
 
-- Existing projects keep `Protocol/adopted/` or confirmed legacy protocol pins until an authorized PROJECT_UPGRADE.
-- Fetch the exact historical STABLE release from authorized local files or GitHub; missing global `/Orchestration/protocol/CURRENT.md` alone is never a reason to replace an existing pin.
-- `packaging/manifests/runtime-package.json` still documents an **optional** local protocol cache/import for offline or managed deployments. If imported, preserve paths, validate checksums, avoid overwrite, and read back. It is not an installer prerequisite for GitHub-plugin bootstrap.
-- GitHub is portable protocol source, not live account project state. Do not export credentials or account-specific runtime.
-- Publishing to the GitHub repository does not prove an already installed plugin in another account automatically refreshed. Verify its activation or reconnect/update through supported host controls.
+- Preserve existing projects' `Protocol/adopted/` or confirmed legacy pins. A new global CURRENT pointer never authorizes automatic migration.
+- Fetch historical releases from authorized local files or GitHub without upgrading.
+- `packaging/manifests/runtime-package.json` documents an **optional** local cache/import for managed or offline deployments. If imported, validate checksums, avoid overwrites, and read back.
+- GitHub source is not account-specific Library state. Publishing to GitHub does not refresh every installed plugin/skill automatically.
 
-## Maintainer publication
+## Release workflow
 
-Update the skill, bootstrap hook, and relevant distribution documentation together. Preserve immutable `protocol/releases/*`; update the GitHub production pointer only as part of a separately authorized protocol release. Use explicit owner authorization for direct publication and record the exact commit. Maintain a consistent manifest if any listed artifact changes. The owner can waive the separate test phase; a readback only establishes the published source, not runtime behavior in a different account.
+1. Update the canonical Skill, its references, README, installation instructions, and plugin metadata consistently.
+2. Validate `SKILL.md` with `skills-ref validate`, validate `plugin.json` against Agent Plugins 1.0.0 schema, check paths and secrets, and run `gh skill publish --dry-run`.
+3. Run disposable installations for target agent directories. Directory installation is not a full host functional test.
+4. Review PR and publish a new Git tag/release only with owner authorization; record commit, tag, source and test evidence.
+5. Preserve immutable `Orchestration/protocol/releases/*` and `Orchestration/protocol/CURRENT.md` unless a separately authorized protocol release changes them.
+6. Roll back a broken Skill by reinstalling a previous verified tag; do not revert live Library state or existing adopted protocol pins automatically.
+
+License: `LICENSE` in the repository and bundled Skill directory. The current source-available license permits internal use but does not grant unrestricted redistribution; selecting an OSI-approved license remains a separate legal decision for the owner.
