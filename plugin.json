@@ -1,13 +1,27 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "orchestration",
-  "version": "0.1.0",
-  "description": "Orchestration project bootstrap and lifecycle workflow backed by versioned Library protocol state.",
+  "version": "0.2.0",
+  "description": "Portable Agent Skill for GitHub-first Orchestration project bootstrap, adoption and lifecycle workflows. ChatGPT Projects/Library actions require compatible host tools.",
+  "author": {
+    "name": "ilyasclick",
+    "url": "https://github.com/ilyasclick"
+  },
+  "homepage": "https://github.com/ilyasclick/orchestration",
+  "repository": "https://github.com/ilyasclick/orchestration",
+  "license": "Proprietary",
+  "keywords": [
+    "agent-skills",
+    "orchestration",
+    "project-bootstrap",
+    "chatgpt",
+    "project-lifecycle"
+  ],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Orchestration",
-        "shortDescription": "Initialize and manage versioned ChatGPT projects",
+        "shortDescription": "Initialize and manage versioned projects",
         "developerName": "ilyasclick",
         "category": "Productivity",
         "websiteURL": "https://github.com/ilyasclick/orchestration"

@@ -1,29 +1,40 @@
 ---
 name: orchestration
-description: Bootstrap, adopt, update, and coordinate Orchestration-managed ChatGPT Projects. Use for "создай проект", "запускай проект", "init", "обнови проект", "создай ветку", branch handoffs, and protocol maintenance.
+description: Bootstrap, adopt, update, and coordinate versioned Orchestration projects. Use for "создай проект", "запускай проект", "init", "обнови проект", "создай ветку", project handoffs, and protocol maintenance. ChatGPT Projects and Library operations require compatible host tools.
+license: Proprietary. See LICENSE
+compatibility: Requires read access to public GitHub for fresh bootstrap and authorized persistent project storage for state changes. ChatGPT Projects/Library operations require ChatGPT-compatible tools.
+metadata:
+  author: ilyasclick
+  version: "0.2.0"
 ---
 
 # Orchestration
 
-This skill is a thin entry point to the versioned Orchestration protocol. It must work in a fresh ChatGPT account that installed only the GitHub plugin. Do not require a pre-existing `/Orchestration/` Library tree.
+A portable Agent Skill entry point for the versioned Orchestration protocol. The skill provides instructions, not extra permissions or a universal project-storage API. It must work in a fresh account without a pre-existing `/Orchestration/` Library tree. Read [references/HOST-CAPABILITIES.md](references/HOST-CAPABILITIES.md) when adapting to a host other than ChatGPT or when a required tool is missing.
+
+## Check host capabilities
+
+1. Determine whether the host can read public GitHub files, read and write the **authorized target project's** persistent state, and read back writes. Do not infer permissions from the skill's installation.
+2. Treat ChatGPT Projects, Library, chat lifecycle, and project settings as **host-specific**. Do not simulate them with an unrelated filesystem or claim that an unsupported host changed them.
+3. If a required capability is missing, report the exact blocker and any verified read-only result. Never claim bootstrap, installation, or migration succeeded without durable readback.
 
 ## Resolve the correct protocol
 
-1. **New project / fresh account**: Read the public GitHub source at `https://github.com/ilyasclick/orchestration`. Fetch `Orchestration/protocol/CURRENT.md` from GitHub (via an available GitHub connector or web reader), then read the **exact production STABLE release** identified by that pointer from the same repository. If the release has baseline dependencies, read the exact referenced releases as needed. Record the retrieved source/ref. The repository pointer is version authority for new-project bootstrap; it is **not** evidence that a Library protocol has already been installed. Absence of `/Orchestration/protocol/CURRENT.md` in the target account is normal and must not block bootstrap.
-2. **Existing project**: Identify the target project's own `<PROJECT_ROOT>/Protocol/adopted/` marker, or its confirmed legacy `INIT.md` if no marker exists. Preserve that project's locally adopted STABLE version. Read the exact historical release from authorized local files when available; otherwise retrieve it from GitHub without upgrading the project.
-3. **Explicit global-upgrade request**: Resolve GitHub `CURRENT.md` for the offered production version; do not adopt it for any existing project without the user's separate permission.
-4. **Maintainer work on Orchestration itself**: Use the locally adopted version and current authorized Library state for project operations. GitHub is the portable release source, not a synchronized mirror of account-specific branch, project, or permission state.
+1. **New project / fresh account**: Read `https://github.com/ilyasclick/orchestration` and fetch `Orchestration/protocol/CURRENT.md` from public GitHub using an available GitHub connector or web reader. Resolve the **exact production STABLE release** identified by that pointer from the same repository snapshot/ref. If the release declares baseline dependencies, read those exact releases. Record the retrieved ref. The GitHub pointer is version authority for fresh bootstrap, **not** proof that the target account has an Orchestration Library tree. Missing `/Orchestration/protocol/CURRENT.md` in a new account must not block bootstrap.
+2. **Existing project**: Inspect only the authorized target project's `<PROJECT_ROOT>/Protocol/adopted/` marker, or confirmed legacy `INIT.md` if no marker exists. Preserve the project's adopted STABLE version. Read the exact historical release from authorized local files when available; otherwise fetch it from GitHub without upgrading.
+3. **Explicit global upgrade**: Resolve the GitHub production pointer for the offered version. Do not adopt it for an existing project without separate project-specific authorization.
+4. **Orchestration maintenance**: Follow the locally adopted release and the authorized Library branch state. GitHub is a portable release source, not a mirror of account-specific projects or permissions.
 
-Do **not** compare the GitHub version with a hard-coded bundled version, including 0.3.0. Do not treat a cached/bundled version as latest. If GitHub is unavailable for a fresh bootstrap, report the source-access failure; never guess a production version or claim successful initialization.
+Never compare the GitHub version with a hard-coded bundled version, including 0.3.0. Never use a cached version as the current release. If GitHub cannot be read for fresh bootstrap, report the source-access failure instead of guessing a version.
 
 ## Execute the user's task
 
-- Run `PROJECT_BOOTSTRAP` from the resolved STABLE protocol to create the **target project's** durable files. Bootstrap may create Library state under the new project's authorized root; it must not require a separate Orchestration Library installation first. Confirm actual writes by Library readback.
-- For an existing project, follow the locally adopted protocol and existing project-specific instructions. Never silently perform `PROJECT_UPGRADE`.
-- Follow branch, lifecycle, authority, approval, and history rules in the selected STABLE release. Do not read or modify unrelated projects without authorization.
-- When project settings cannot be updated through a supported action, provide the actual instructions for the user to apply; do not claim those settings changed.
-- Report source version and actual completion. Do not claim a GitHub update automatically refreshed an already installed plugin instance.
+- Execute `PROJECT_BOOTSTRAP` from the resolved STABLE protocol **only if** the host supports the required target-project operations. Bootstrap may create authorized target-project Library state; a separate global Orchestration Library import is not required for GitHub-first bootstrap. Verify actual writes by readback.
+- For existing projects, follow their locally adopted protocol and project instructions; never silently run `PROJECT_UPGRADE`.
+- Respect branch lifecycle, authority, approvals, isolation, and history requirements from the selected release. Never read or modify unrelated projects without authorization.
+- When host project settings cannot be changed through supported actions, provide exact manual steps; never report a settings change that did not occur.
+- Report source ref, protocol version, observed operations, readback evidence, and blockers. Publishing GitHub source does not prove an already installed plugin or skill refreshed in another account.
 
-## GitHub release and distribution
+## Distribution
 
-Public portable source: `https://github.com/ilyasclick/orchestration`. Read `references/DISTRIBUTION.md` before importing or publishing. Optional installation of a local `/Orchestration/protocol/` runtime cache is **not a prerequisite** for GitHub-based new-project bootstrap. The account's Library remains authoritative for the actual project state and locally adopted versions. Never publish credentials, sessions, or unrelated project content.
+Public source: `https://github.com/ilyasclick/orchestration`. Read [references/DISTRIBUTION.md](references/DISTRIBUTION.md) before importing or publishing. The optional local runtime cache is not required for GitHub-based new-project bootstrap. The target account's persistent state remains authoritative for its projects. Never export secrets, sessions, or unrelated project data.
