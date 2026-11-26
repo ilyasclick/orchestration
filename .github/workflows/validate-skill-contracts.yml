@@ -20,3 +20,5 @@ jobs:
           python-version: '3.11'
       - name: Validate candidate contracts
         run: python tests/validate_contracts.py
+      - name: Run isolated reference-model fixtures
+        run: python -m unittest discover -s tests -p "test_candidate_model.py" -v
