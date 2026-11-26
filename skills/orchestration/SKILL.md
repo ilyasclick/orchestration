@@ -43,3 +43,5 @@ Public source: `https://github.com/ilyasclick/orchestration`. Read [references/D
 ## Candidate modular contracts (nonproduction)
 
 For development of the next protocol release, consult [semantic commands](references/COMMANDS.md), [resolver](references/RESOLVER.md), [storage/history](references/STORAGE.md), [per-project migration](references/MIGRATION.md), and [release/audit](references/RELEASE.md). These are **review candidates**, not replacements for a project's locally adopted STABLE protocol. Do not invoke them to bypass legacy pin rules, create monitoring, move Library objects, change CURRENT, or promote a release. The 14 intents are natural-language workflows, not proof of CLI/voice routing. Release promotion requires exact-payload independent acceptance and explicit owner approval.
+
+The candidate's incident, monitoring and delivery evidence rules are in [references/EVIDENCE.md](references/EVIDENCE.md). They preserve the frozen S1/S4/S5 scope and are not a new recurring-automation authorization.
