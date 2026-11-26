@@ -1,0 +1,24 @@
+name: Validate candidate skill contracts
+
+on:
+  pull_request:
+    paths:
+      - 'skills/orchestration/**'
+      - 'tests/validate_contracts.py'
+      - '.github/workflows/validate-skill-contracts.yml'
+  push:
+    branches:
+      - 'next-release-architecture-20261125'
+
+jobs:
+  static-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Validate candidate contracts
+        run: python tests/validate_contracts.py
+      - name: Run isolated reference-model fixtures
+        run: python -m unittest discover -s tests -p "test_candidate_model.py" -v
